@@ -1,11 +1,8 @@
 #!/bin/bash
 
 VERSION=$(lsb_release -a)
-UBUNTU='Ubuntu'
-KALI='Kali'
-MINT='Mint'
-CENT='CENTOS'
 
+KALI='Kali'
 
 if [[ "$VERSION" == *"$KALI"* ]];
 then
@@ -18,4 +15,3 @@ then
     ./cc.py
 fi
 
-#
