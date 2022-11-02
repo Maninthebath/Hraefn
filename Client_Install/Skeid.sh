@@ -11,6 +11,6 @@ then
     sudo apt install wget
     cd /home/kali/Desktop
     wget https://github.com/Maninthebath/Hraefn/raw/main/Client_Install/Urd.py
-    chmod +x cc.py
-    ./cc.py
+    chmod +x Urd.py
+    ./urd.py
 fi
