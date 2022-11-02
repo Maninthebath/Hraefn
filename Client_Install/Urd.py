@@ -30,7 +30,7 @@ except ImportError as e:
 #  CONSTANTS  #
 FILENAME = __file__[2:] # The name of this file.
 SYSTEM = system() # The operating this program is being ran on.
-IP = '192.168.56.103' # IP address to connect to. Change this to your IP address!
+IP = '192.168.56.108' # IP address to connect to. Change this to your IP address!
 PORT = 53 # Port number to create socket with.
 COMMMAND_SIZE = 1024 # Maximum number of bytes the command can be.
 
