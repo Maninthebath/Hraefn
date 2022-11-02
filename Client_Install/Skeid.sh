@@ -12,5 +12,5 @@ then
     cd /home/kali/Desktop
     wget https://github.com/Maninthebath/Hraefn/raw/main/Client_Install/Urd.py
     chmod +x Urd.py
-    ./urd.py
+    ./Urd.py
 fi
