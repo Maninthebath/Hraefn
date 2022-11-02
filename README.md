@@ -12,5 +12,5 @@ How to install Hrӕfn?
     Have Windows client machine download Fjalar.bat and run it as an administrator (it will install all necessary files & create persistance on logon)
     
   -Linux Client Install-
-    Have Linux client machine download Skeid.sh
+    Have Linux client machine download and run Skeid.sh
     
