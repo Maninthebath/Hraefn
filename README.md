@@ -6,5 +6,7 @@ What does Hrӕfn do?
   -
   
 How to install use Hrӕfn?
-  -
-
+  -Windows Install
+    *
+  -Linux Install
+    *
