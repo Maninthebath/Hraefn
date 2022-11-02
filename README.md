@@ -1,5 +1,5 @@
 # Hrӕfn
-a Persistence and Exploitation 
+a Persistence and Exploitation Tool 
 by Jeff Lee, Toni Mason, & Blake Bargen
 
 What does Hrӕfn do?
